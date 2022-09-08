@@ -51,6 +51,10 @@ app.use((err: Error | CustomError, req: Request, res: Response, _: NextFunction)
   });
 });
 
+import helloRouter from './routes/hello'
+
+app.set('view engine', 'ejs')
+app.use('/hello', helloRouter)
 
 // **** Serve front-end content **** //
 
